@@ -1,0 +1,31 @@
+.container {
+  width: 50px;
+  height: 25px;
+  background-color: #333;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  position: relative;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 12px;
+  opacity: 1;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  background-color: #53c28b;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.dark {
+  transform: translateX(20px);
+}

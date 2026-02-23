@@ -30,6 +30,11 @@ body {
   margin: 0;
 }
 
+h1, a, p{
+  opacity: 0.8;
+  color: red;
+}
+
 a {
   color: inherit;
   text-decoration: none;
