@@ -4,12 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 20;
+  margin-top: 200;
 }
 
-
-.icons{
-    display: flex;
-    gap: 10px;
-    opacity: 0.7;
-    margin-right: 50px;
+.icons {
+  display: flex;
+  gap: 10px;
+  opacity: 0.7;
+  cursor: pointer;
 }

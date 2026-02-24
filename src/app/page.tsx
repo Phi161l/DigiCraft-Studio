@@ -1,23 +1,34 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "./components/Button/Button";
-// import Hero from "public/hero.png";
-
 
 export default function Home() {
   return (
-    <div>
-      <div>
-        <h1> Better design for your digital products. </h1>
-        <p> Turning your Idea into Reality. We bring together the teams from the global tech industry. </p>
-        < Button /> 
+    <section className={styles.container}>
+      <div className={styles.left}>
+        <h1 className={styles.title}>
+          Better design <br />
+          for your digital <br />
+          products.
+        </h1>
+
+        <p className={styles.desc}>
+          Turning your Idea into Reality. We bring together
+          the teams from the global tech industry.
+        </p>
+
+        <Button text="See Our Works" />
       </div>
 
-      <div>
-        {/* <Image src={Hero} alt="" className={styles.img} /> */}
+      <div className={styles.right}>
+        <Image
+          src="/hero.png"
+          alt="Hero Illustration"
+          fill
+          className={styles.heroImg}
+          priority
+        />
       </div>
-
-    </div>
+    </section>
   );
 }
- 
