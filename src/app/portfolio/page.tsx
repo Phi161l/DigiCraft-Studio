@@ -13,8 +13,8 @@ export default function Portfolio() {
           <p> Illustrations </p>
         </Link>
 
-        <Link href="/portfolio/websites">
-          <Image src="/websites.jpg" alt="" width={200} height={400} />
+        <Link href="/portfolio/Websites">
+          <Image src="/Websites.jpg" alt="" width={200} height={400} />
           <p> Websites </p>
         </Link>
 

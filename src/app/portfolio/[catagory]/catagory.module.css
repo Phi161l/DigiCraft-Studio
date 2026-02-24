@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: space-between; /* fixed typo */
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Reverse layout for even items */
+.container:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.catagory {
+  color: #4ade80;
+  font-size: 40px;
+}
+
+.desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.desc h1 {
+  opacity: 0.7;
+}
+
+.container p {
+  opacity: 0.7;
+}
+
+.title {
+  font-size: 60px;
+}
+
+.img {
+  flex: 1;
+}
+
+.img img {
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,78 @@
+/* ================= WRAPPER ================= */
+
+.wrapper {
+  background-color: #0d0d0d;
+  min-height: 100vh;
+  padding: 60px 80px;
+  color: white;
+}
+
+/* ================= TITLE ================= */
+
+.title {
+  font-size: 70px;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-bottom: 60px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.right {
+  flex: 1;
+}
+
+/* ================= FORM ================= */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form input,
+.form textarea {
+  background-color: transparent;
+  border: 1px solid #888;
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #777;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #53c28b;
+}
+
+.form textarea {
+  resize: none;
+  min-height: 250px;
+}
