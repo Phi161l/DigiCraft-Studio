@@ -1,0 +1,78 @@
+.container {
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input {
+  background-color: transparent;
+  border: 1px solid #555;
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  border-radius: 6px;
+}
+
+.form input::placeholder {
+  color: #777;
+}
+
+.form input:focus {
+  border-color: #53c28b;
+}
+
+.button {
+  background-color: #53c28b;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.divider {
+  margin: 25px 0;
+  color: #888;
+}
+
+.login {
+  color: #bbb;
+  cursor: pointer;
+}
+
+.login:hover {
+  text-decoration: underline;
+}

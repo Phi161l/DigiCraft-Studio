@@ -1,8 +1,14 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import styles from "./blog.module.css";
-import Link from "next/link";
+import styles from "./blogDetail.module.css"
+import { notFound } from "next/navigation";
 
-export default function Blog() {
+export default async function BlogDetail({
+  params,
+}: {
+  params: { id: String };
+}) {
+  const id = (await params).id;
   const data = [
     {
       id: 1,
@@ -36,19 +42,41 @@ export default function Blog() {
     },
   ];
 
+  const blog = data.find((item) => String(item.id) === id);
+  if(!blog){
+    notFound()
+  }
+
   return (
-    <div>
-      {data.map((item) => {
-        return (
-          <Link href={`/blog/${item.id}`} className={styles.container} key={item.id}>
-            <Image src={item.img} alt="" width={300} height={300} />
-            <div className={styles.left}>
-              <h2 className={styles.title}> {item.title} </h2>
-              <p className={styles.desc}> {item.desc} </p>
-            </div>
-          </Link>
-        );
-      })}
+    <div className={styles.container}>
+      {/* RIGHT SIDE */}
+      <div className={styles.right}>
+        <h1>{blog.title}</h1>
+        <p>{blog.desc}</p>
+
+        <div className={styles.author}>
+          <Image
+            src={blog.img}
+            alt="author"
+            width={40}
+            height={40}
+            className={styles.authorImage}
+          />
+          <span>ibrahim</span>
+        </div>
+      </div>
+
+      {/* LEFT SIDE */}
+      <div className={styles.left}>
+        <Image
+          src={blog.img}
+          alt={blog.title}
+          width={400}
+          height={500}
+          className={styles.mainImage}
+          priority
+        />
+      </div>
     </div>
   );
 }
