@@ -8,7 +8,7 @@ export default function Portfolio() {
       <h2 className={styles.title}> Choose a gallery </h2>
 
       <div className={styles.images}>
-        <Link href="/portfolio/illustration">
+        <Link href="/portfolio/illustration" className={styles.links}>
           <Image src="/illustration.png" alt="" width={200} height={400} />
           <p> Illustrations </p>
         </Link>
