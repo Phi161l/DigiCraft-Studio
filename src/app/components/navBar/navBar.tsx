@@ -1,15 +1,33 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Theme from "../theme/theme";
 import styles from "./navbar.module.css";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const route = useRouter();
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    fetch("/api/me")
+      .then(res => res.json())
+      .then(data => setUser(data.user));
+  }, []);
+
+  function handleLogout() {
+    fetch("/api/logout", {
+      method: "POST",
+    });
+
+    route.push("/dashboard/login");
+  }
+  
   return (
     <nav className={styles.container}>
-      
       {/* Logo */}
-      <div className={styles.logo}>
-        DigiCraft
-      </div>
+      <div className={styles.logo}>DigiCraft</div>
 
       {/* Right Side */}
       <div className={styles.right}>
@@ -22,9 +40,9 @@ export default function NavBar() {
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/dashboard">Dashboard</Link>
+          { user &&  <button onClick={handleLogout}> Logout </button>}
         </div>
       </div>
-
     </nav>
   );
 }

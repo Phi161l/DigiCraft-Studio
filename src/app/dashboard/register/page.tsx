@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./register.module.css";
+import Link from "next/link";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -76,7 +77,7 @@ export default function Register() {
 
         <div className={styles.divider}>- OR -</div>
 
-        <p className={styles.login}>Login with an existing account</p>
+        <p className={styles.login}> <Link href= "/dashboard/login"> Login with an existing account </Link></p>
       </div>
     </div>
   );

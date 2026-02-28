@@ -1,7 +1,24 @@
-export default function Dashboard(){
-    return(
-        <div>
-            <h1> dashboard </h1>
-        </div>
-    )
+import { redirect } from "next/navigation";
+import { getCurrentUser } from "@/lib/auth";
+
+type UserPayload = {
+  id: string;
+  username: string;
+  email: string;
+};
+
+export default async function Dashboard() {
+  const user: UserPayload | null = await getCurrentUser();
+
+  if (!user) {
+    redirect("/dashboard/login");
+  }
+
+  return (
+    <div>
+      <h1>Welcome, {user.username}</h1>
+      <p>Your email: {user.email}</p>
+    </div>
+  );
 }
+
