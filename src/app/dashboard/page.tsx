@@ -15,9 +15,8 @@ export default async function Dashboard() {
   }
 
   return (
-    <div>
+    <div> 
       <h1>Welcome, {user.username}</h1>
-      <p>Your email: {user.email}</p>
     </div>
   );
 }
