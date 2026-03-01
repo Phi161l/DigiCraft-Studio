@@ -21,8 +21,10 @@ export default function NavBar() {
       method: "POST",
     });
 
-    route.push("/dashboard/login");
+    route.push("/auth/login");
   }
+
+  console.log(user)
   
   return (
     <nav className={styles.container}>
@@ -40,7 +42,7 @@ export default function NavBar() {
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/dashboard">Dashboard</Link>
-          { user &&  <button onClick={handleLogout}> Logout </button>}
+          { user &&  <button onClick={handleLogout} style={{backgroundColor: "#4ade80"}}> Logout </button>}
         </div>
       </div>
     </nav>

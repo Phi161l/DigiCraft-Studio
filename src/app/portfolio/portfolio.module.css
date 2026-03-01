@@ -8,9 +8,9 @@
   opacity: 0.6;
 }
 
-.images {
+.images{
   display: flex;
-  justify-content: space-between;
+  gap: 100px;
 }
 
 .title {
@@ -21,12 +21,13 @@
 }
 
 .images :global(img) {
-  border: 3px solid white;   /* thickness + style + color */
-  border-radius: 10px;       /* rounding corners */
+  width: 300px;      /* set width */
+  height: 400px;     /* or auto for proportional height */
+  border: 3px solid white;
+  border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s;
   cursor: pointer;
-  object-position: left;
 }
 
 .images :global(img):hover {

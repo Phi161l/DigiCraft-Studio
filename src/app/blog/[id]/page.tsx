@@ -3,6 +3,7 @@ import styles from "./blogDetail.module.css";
 import { notFound } from "next/navigation";
 import Post from "@/models/Post";
 import connect from "@/lib/db";
+import { getCurrentUser } from "@/lib/auth";
 
 export default async function BlogDetail({
   params,
@@ -13,6 +14,7 @@ export default async function BlogDetail({
 
   const { id } = await params; 
 
+  const user = await getCurrentUser()
   const blog = await Post.findById(id);
 
   if (!blog) {
@@ -34,7 +36,7 @@ export default async function BlogDetail({
             height={40}
             className={styles.authorImage}
           />
-          <span>Ibrahim</span>
+          <span>{user?.username}</span>
         </div>
 
         {/* ✅ CONTENT SECTION */}

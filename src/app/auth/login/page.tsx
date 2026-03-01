@@ -58,7 +58,7 @@ export default function Login() {
 
         <p className={styles.register}>
           {" "}
-          <Link href="/dashboard/register"> Create new account </Link>
+          <Link href="/auth/register"> Create new account </Link>
         </p>
       </div>
     </div>

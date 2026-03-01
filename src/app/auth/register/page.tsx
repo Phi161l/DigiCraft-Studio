@@ -77,7 +77,7 @@ export default function Register() {
 
         <div className={styles.divider}>- OR -</div>
 
-        <p className={styles.login}> <Link href= "/dashboard/login"> Login with an existing account </Link></p>
+        <p className={styles.login}> <Link href= "/auth/login"> Login with an existing account </Link></p>
       </div>
     </div>
   );
