@@ -4,8 +4,8 @@
   justify-content: space-between;
   gap: 40;
   padding: 50px 60px;
-  background-color: #0d0d0d;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .left {

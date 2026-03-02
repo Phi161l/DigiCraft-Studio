@@ -3,8 +3,8 @@
   gap: 80px;
   padding: 60px;
   min-height: 80vh;
-  background: #0d0d0d;
-  color: #ccc;
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* LEFT SIDE */
@@ -54,7 +54,7 @@
   padding: 12px;
   background: transparent;
   border: 1px solid #555;
-  color: #fff;
+  color: var(--text);
   outline: none;
 }
 
@@ -69,7 +69,7 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
-  color: white;
+  color: var(--text);
   transition: 0.3s;
 }
 

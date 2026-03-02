@@ -1,8 +1,8 @@
 /* ================= CONTAINER ================= */
 
 .container {
-  background-color: #0d0d0d;
-  color: #bbb;
+  background-color: var(--bg);
+  color: var(--text);
   min-height: 100vh;
   padding: 60px 80px;
   display: flex;
@@ -30,7 +30,7 @@
   left: 40px;
   background-color: #53c28b;
   padding: 25px 35px;
-  color: white;
+  color: var(--text);
   max-width: 800px;
   height: 120px;
 }
@@ -63,7 +63,7 @@
 .right h1 {
   font-size: 32px;
   margin-bottom: 25px;
-  color: white;
+  color: var(--text);
 }
 
 .left p,

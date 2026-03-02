@@ -1,6 +1,11 @@
 :root {
-  --background: #0d0d0d;
-  --foreground: #ffffff;
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+[data-theme="dark"] {
+  --bg: #0d0d0d;
+  --text: #ffffff;
 }
 
 /* Reset */
@@ -11,29 +16,42 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background 0.3s,
+    color 0.3s;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;  /* full viewport height */
-  margin: 0;
+  min-height: 100vh;
 }
- 
 
-/* MAIN WRAPPER (full width background) */ 
+/* Full-width background for theme transition */
 .wrapper {
   width: 100%;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg); 
 }
 
-/* CENTERED CONTENT CONTAINER */
+/* Centered content */
 .container {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
+/* Make sure main content takes available space */
+.container > main,
+.container > div:not(:first-child):not(:last-child) {
+  flex: 1;
+}
 
 /* Links */
 a {
@@ -41,23 +59,9 @@ a {
   color: inherit;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* OPTIONAL: Body padding for very small screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}

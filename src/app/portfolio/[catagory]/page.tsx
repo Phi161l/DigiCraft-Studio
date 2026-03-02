@@ -1,4 +1,4 @@
-import Button from "@/app/components/Button/Button";
+import Button from "@/components/Button/Button";
 import Image from "next/image";
 import styles from "./catagory.module.css";
 

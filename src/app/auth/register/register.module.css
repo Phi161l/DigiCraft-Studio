@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background-color: #0f0f0f;
+  background-color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@
 .card {
   width: 400px;
   text-align: center;
-  color: white;
+  color: var(--text);
 }
 
 .title {
@@ -35,7 +35,7 @@
   border: 1px solid #555;
   padding: 15px;
   font-size: 16px;
-  color: white;
+  color: var(--text);
   outline: none;
   border-radius: 6px;
 }
@@ -53,7 +53,7 @@
   border: none;
   padding: 15px;
   font-size: 16px;
-  color: white;
+  color: var(--text);
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s ease;

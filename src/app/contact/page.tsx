@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../components/Button/Button";
+import Button from "../../components/Button/Button";
 import styles from "./contact.module.css";
 
 export default function Contact() {
